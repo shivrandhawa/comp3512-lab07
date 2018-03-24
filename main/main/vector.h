@@ -35,3 +35,12 @@ int max(std::vector<int>& theVec) {
 	return maxofelements;
 }
 
+int min(std::vector<int>& vector_name) {
+	int minimum = INT_MAX;
+	for (auto val : vector_name)
+	{
+		if (minimum > val) minimum = val;
+	}
+	return minimum;
+}
+
