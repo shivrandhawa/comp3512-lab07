@@ -13,17 +13,25 @@ using namespace std;
 
 
 int sum(const std::vector<int>& v){
-    int sum_of_elems =0;
+    int sumofelements =0;
 
     std::for_each(v.begin(), v.end(), [&] (int n) {
-        sum_of_elems += n;
+		sumofelements += n;
         
     })
     ;
     
-    cout<<"sum: "<< sum_of_elems<<endl;
-    return sum_of_elems;
+    cout<<"sum: "<< sumofelements <<endl;
+    return sumofelements;
 }
 
-
+int max(std::vector<int>& theVec) {
+	int maxofelements = INT_MIN;
+		//auto!
+	for (auto x : theVec)
+	{
+		if (maxofelements < x) maxofelements = x;
+	}
+	return maxofelements;
+}
 
